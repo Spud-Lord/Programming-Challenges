@@ -36,7 +36,7 @@ def mainturn(row, column):
     for y in range(0,(len(grid))):
         print(grid[y])                  #Places the cross or nought in the appropriate space
     if symbol == 'X':
-        symbol = 'O'
+        symbol = 'O'                    #Switches the symbol each turn
     elif symbol == 'O':
         symbol = 'X'
     return countmove
@@ -48,8 +48,9 @@ def check_win(row, column, symbol):
         time.sleep(2)
         exit()                                              #Exits the program
     elif countmove == 9:
-        print("Board Full. Game over.")                     #What happens if it is a draw
-
+        print("Its a draw!")                     #What happens if it is a draw
+        time.sleep(2)
+        exit()
 
 #Main Programming Runtime
 grid = [["","",""],["","",""],["","",""]]
